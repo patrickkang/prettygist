@@ -1,0 +1,24 @@
+{
+  "name": "prettygist",
+  "version": "0.0.0",
+  "description": "prettygist",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "grunt test --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/patrickkang/prettygist.git"
+  },
+  "author": "Patrick Kang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/patrickkang/prettygist/issues"
+  },
+  "homepage": "https://github.com/patrickkang/prettygist",
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-watch": "~0.6.1"
+  }
+}

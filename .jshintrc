@@ -1,0 +1,14 @@
+//https://gist.github.com/connor/1597131
+{
+  // Settings
+  "passfail" : false,
+
+  // Development
+  "debug" : false,
+  "devel" : true,
+
+  // Preferences
+  "newcap" : true,
+  "noempty" : true
+
+}
