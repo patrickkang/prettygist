@@ -1,26 +1,34 @@
-module.exports = function(grunt){
-  'use strict';
-
-  // load grunt-jslint
-  grunt.loadNpmTasks('grunt-jslint');
-
+module.exports = function (grunt){
   grunt.initConfig({
-    pkg: grunt.file.readJSON('package.json');
+    jshint: {
+      options: {
+        jshintrc: '.jshintrc'
+      },
+      all: ['Gruntfile.js', 'js/*.js', '!js/vendor/*.js', '!js/prettygist.min.js']
+    },
 
-    jslint:{
-      prebuild:{
-        options: {
-          jshintrc: '.jshintrc'
-        },
+    uglify:{
+      all:{
         files:{
-          src:{
-            'Gruntfile.js',
-            'js/*.js'
-          }
+          'js/prettygist.min.js': ['js/*.js', '!js/vendor/*.js']
         }
       }
+    },
+
+    watch:{
+      jshint: {
+        files: ['Gruntfile.js', 'js/*.js', '!js/prettygist.min.js'],
+        tasks: ['jshint', 'uglify']
+      }
     }
+
   });
 
-  grunt.registerTask('lint', 'Run linting', ['jslint']);
-}
+  // Load the grunt plugins
+  grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+
+  // Register the default tasks
+  grunt.registerTask('default', ['watch']);
+};

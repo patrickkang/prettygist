@@ -33,7 +33,7 @@ var getGist = function(gist_id){
       renderGist(data);
     }
   });
-}
+};
 
 var renderGist = function(data){
   $.ajax({

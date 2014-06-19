@@ -3,12 +3,32 @@
   // Settings
   "passfail" : false,
 
+  
+  "node" : true,
+  "jquery": true,
+  "browser" : true, // Shared browser globals e.g. 'window', 'document'
+  "predef" : [
+    "Mustache"
+  ],
+
   // Development
   "debug" : false,
   "devel" : true,
 
+  "bitwise" : true, // no bitwise operators!
+  "curly" : true, // Require {} for every new block or scope.
+  "eqeqeq": true, // Require triple equals. i.e. ===
+  "eqnull": false, // Tolerate use of '== null'.
+  "immed" : true, // Require immediate invocations to be wrapped in parens e.g. '( function(){}() );'
+  "latedef" : true, // prohibit variable use before definition
+  "undef" : true, // Require all non-global variables be declared before they are used.
+
   // Preferences
-  "newcap" : true,
-  "noempty" : true
+  "newcap" : true, // Require capitalization of all constructor functions e.g. `new F()`.
+  "noempty" : true, // Prohibit use of empty blocks
+  "nomen": true, // Prohibit use of initial or trailing underbars in names.
+  "trailing" : true, // Prohibit trailing whitespaces.
+  "white": true, // check against strict whitespace and indentation rules.
+  "indent": 2 // specify indentation spacing
 
 }
