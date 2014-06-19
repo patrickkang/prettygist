@@ -5,7 +5,6 @@ var gist_id;
 })();
 
 $(document).ready(function(){
-  console.log(gist_id);
   if(gist_id === ''){
     indexPage();
   } else {
@@ -26,7 +25,6 @@ var indexPage = function(){
 
 var getGist = function(gist_id){
   var url = 'https://api.github.com/gists/' + gist_id;
-  console.log(url);
   $.ajax({
     url: url,
     async: false,
@@ -44,9 +42,16 @@ var renderGist = function(data){
     success: function(response){
       var view, template, html;
       $('#prettygist').html('');
-      view={
+      for(var filename in data.files);
 
+      view={
+        title: data.description,
+        owner: data.owner.login,
+        gist_url: data.files[filename].raw_url,
+        owner_url: data.owner.html_url,
+        content: data.files[filename].content
       };
+
       template = response;
       html = Mustache.to_html(template, view);
       $('#prettygist').append($(html));

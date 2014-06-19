@@ -4,7 +4,8 @@
   "description": "prettygist",
   "main": "Gruntfile.js",
   "scripts": {
-    "test": "grunt test --verbose"
+    "test": "grunt test --verbose",
+    "start": "python -m SimpleHTTPServer"
   },
   "repository": {
     "type": "git",
