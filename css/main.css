@@ -53,7 +53,7 @@ html, body {
   height: 100%; }
 
 body {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
   font-weight: 300;
@@ -100,4 +100,17 @@ a:visited {
 
 .container {
   padding: 30px 0;
+}
+
+
+h1#site-name{
+  font-size: 3em;
+  margin-bottom: 40px;
+}
+footer p{
+  font-size: .95em;
+  color: #828282;
+}
+footer b{
+  font-weight: 800;
 }
