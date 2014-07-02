@@ -63,9 +63,13 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
 }
 h1{
-  font-size: 200%;
+  font-family: 'Lobster', 'Montserrat', Helvetica, Arial, sans-serif;
+  line-height: 1.4;
+  font-size: 400%;
 }
 h2{
+  /*font-family: 'Lobster', 'Montserrat', Helvetica, Arial, sans-serif;*/
+  text-indent: 10px;
   font-size: 150%;
 }
 
@@ -96,6 +100,7 @@ a:visited {
   padding: 0 30px;
   margin: 0 auto;
   zoom: 1;
+  overflow-wrap: break-word;
 }
 
 .container {
@@ -113,4 +118,13 @@ footer p{
 }
 footer b{
   font-weight: 800;
+}
+
+/* page styles */
+h1.page_title{
+  padding-left: 5px;
+}
+h2.page_owner{
+  margin: 0 0 5% 0;
+  text-transform: uppercase;
 }

@@ -49,7 +49,7 @@ var renderGist = function(data){
         owner: data.owner.login,
         gist_url: data.files[filename].raw_url,
         owner_url: data.owner.html_url,
-        content: data.files[filename].content
+        content: marked(data.files[filename].content)
       };
 
       template = response;
