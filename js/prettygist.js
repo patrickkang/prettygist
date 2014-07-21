@@ -46,6 +46,7 @@ var renderGist = function(data){
 
       view={
         title: data.description,
+        gist_id: data.id,
         owner: data.owner.login,
         gist_url: data.files[filename].raw_url,
         owner_url: data.owner.html_url,
