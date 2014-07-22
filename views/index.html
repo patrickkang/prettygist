@@ -27,3 +27,13 @@
     </div>
   </div>
 </footer>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $('form#run').submit(function(e){
+    var gist_id = $('#gist_id').val();
+    document.location += '?' + gist_id;
+    e.preventDefault();
+  });
+});
+</script>
