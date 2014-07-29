@@ -6,7 +6,7 @@
       <p>blah blah blah ...</p>
       <form id="run" action="." method="get">
         <input id="gist_id" type="text" placeholder="Search for a gist ID" />
-        <button type="submit" id="submit">Submit</button>
+        <button type="submit" id="submit">Go</button>
       </form>
     </div>
     <div id="intro-examples">
@@ -18,21 +18,21 @@
     </div>
   </div>
 </div>
+
 <footer>
-  <div class="container">
-    <div class="wrap">
-      <p><a href="/">prettygist</a></p>
-      <p>Made by <b>Patrick</b></p>
-      <p>Inspired by <a href="http://resume.github.io/">GitHub Résumé</a></p>
-    </div>
+<div class="wrap footer">
+  <div class="footer-container">
+    <span><a href="/">prettygist</a></span>
+    <p>Made by <b>Patrick</b></p>
   </div>
+</div>
 </footer>
 
 <script type="text/javascript">
 $(document).ready(function(){
   $('form#run').submit(function(e){
     var gist_id = $('#gist_id').val();
-    document.location += '?' + gist_id;
+    document.location = document.location.pathname + '?' + gist_id;
     e.preventDefault();
   });
 });
