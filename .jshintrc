@@ -16,11 +16,11 @@
   "devel" : true,
 
   "bitwise" : true, // no bitwise operators!
-  "curly" : true, // Require {} for every new block or scope.
+  "curly" : false, // Require {} for every new block or scope.
   "eqeqeq": true, // Require triple equals. i.e. ===
   "eqnull": false, // Tolerate use of '== null'.
   "immed" : true, // Require immediate invocations to be wrapped in parens e.g. '( function(){}() );'
-  "latedef" : true, // prohibit variable use before definition
+  "latedef" : false, // prohibit variable use before definition
   "undef" : true, // Require all non-global variables be declared before they are used.
 
   // Preferences

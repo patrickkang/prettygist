@@ -8,8 +8,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
   margin: 0;
@@ -19,25 +19,31 @@ time, mark, audio, video {
   font: inherit;
   vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
+
 body {
   line-height: 1;
 }
+
 ol, ul {
   list-style: none;
 }
+
 blockquote, q {
   quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
   content: '';
   content: none;
 }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -47,40 +53,46 @@ table {
 /* ----------------------------------------------------------*/
 * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 html, body {
-  height: 100%; }
+  height: 100%;
+}
 
 body {
   font-family: 'Montserrat', Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
   font-weight: 300;
-  background-color: #fdfdfd; }
+  background-color: #fdfdfd;
+}
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
 }
-h1{
+
+h1 {
   font-size: 200%;
 }
-h2{
+
+h2 {
   font-size: 150%;
 }
 
 a {
   color: #2a7ae2;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 a:hover {
   color: #000;
-  text-decoration: underline; }
+  text-decoration: underline;
+}
 
 a:visited {
-  color: #205caa; }
-
-
+  color: #205caa;
+}
 
 /* Utility */
 .wrap:before,
@@ -88,9 +100,11 @@ a:visited {
   content: "";
   display: table;
 }
+
 .wrap:after {
   clear: both;
 }
+
 .wrap {
   max-width: 800px;
   padding: 0 30px;
@@ -102,15 +116,16 @@ a:visited {
   padding: 30px 0;
 }
 
-
-h1#site-name{
+h1#site-name {
   font-size: 3em;
   margin-bottom: 40px;
 }
-footer p{
+
+footer p {
   font-size: .95em;
   color: #828282;
 }
-footer b{
+
+footer b {
   font-weight: 800;
 }
