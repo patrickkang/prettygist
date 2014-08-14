@@ -28,7 +28,7 @@ module.exports = function (grunt){
 
     watch:{
       jshint: {
-        files: ['Gruntfile.js', 'js/*.js', '!js/prettygist.min.js'],
+        files: ['Gruntfile.js','scss/*.scss', 'js/*.js', '!js/prettygist.min.js'],
         tasks: ['sass','jshint', 'uglify']
       }
     }

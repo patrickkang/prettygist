@@ -1,54 +1,5 @@
-/* reset.css */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block;
-}
-
-body {
-  line-height: 1;
-}
-
-ol, ul {
-  list-style: none;
-}
-
-blockquote, q {
-  quotes: none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
+@import 'reset';
+@import 'variables';
 /* Base */
 /* ----------------------------------------------------------*/
 * {
@@ -84,8 +35,7 @@ h1 {
   font-size: 200%;
 }
 
-h2 {
-=======
+
 h1{
   font-family: 'Alegreya Sans', Helvetica, Arial, sans-serif;
   line-height: 1.4;
@@ -93,7 +43,6 @@ h1{
 }
 h2{
   text-indent: 10px;
->>>>>>> 9d549e9c4ce3bd1515e4a7a868a0555036bd7c4f:css/main.css
   font-size: 150%;
 }
 h1, h2, h3, h4, h5{
@@ -197,13 +146,6 @@ h1.page_title{
   padding-left: 5px;
   font-size: 4.5em;
 }
-h2.page_owner{
-  margin: 0 0 5% 0;
-  text-transform: uppercase;
-  font-size: 1.5em;
-  line-height: 1.5em;
-  color: #b0b0ad;
-}
 div.page_content img{
   min-width: 100%;
   max-width: 100%;
@@ -251,4 +193,76 @@ footer b {
 
 .footer p{
   padding-top: 1em;
+}
+
+
+
+
+
+
+.back_button{
+  margin-bottom: 1.5em;
+}
+
+.page_owner {
+  border-bottom: 1px solid;
+  display: inline-block;
+  font-family: $sans-serif-2;
+  font-size: .7em;
+  font-weight: 900;
+  letter-spacing: 1px;
+  margin-bottom: 2em;
+  padding: .1em 0;
+  text-align: left;
+  text-transform: uppercase;
+}
+.page_meta{
+  margin-bottom: 1.5em;
+}
+
+.page_content{
+  h1, h2, h3, h4{
+    font-family: $sans-serif-2;
+  }
+  h1 {
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: .6em;
+  }
+  h2 {
+   font-size: 2em;
+   font-weight: 700;
+   text-transform: uppercase;
+   line-height: 1.4em;
+   margin: .75em 0;
+  }
+  h3 {
+   font-size: 1.6em;
+   font-weight: 550;
+   text-transform: uppercase;
+   line-height: 1.4em;
+   margin-bottom: .5em; 
+  }
+  h4 {
+   font-size: 1.35em;
+   font-weight: 450;
+   text-transform: uppercase;
+   line-height: 1.4em;
+   margin-bottom: .5em; 
+  }
+  p {
+    font-family: $sans-serif;
+    font-size: 1.2em;
+    font-weight: 400;
+    line-height: 1.4em;
+    margin-bottom: 1.1em;
+  }
+  hr {
+    width: 3em;
+    margin: 1.5em 0;
+  }
+  .author {
+    font-family: $sans-serif;
+    font-style: italic;
+  }
 }
