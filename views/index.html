@@ -4,8 +4,9 @@
     <div id="intro">
       <h2>Why?</h2>
       <p>blah blah blah ...</p>
-      <form>
-        <p>Search form field</p>
+      <form id="run" action="." method="get">
+        <input id="gist_id" type="text" placeholder="Search for a gist ID" />
+        <button type="submit" id="submit">Go</button>
       </form>
     </div>
     <form id="run" action="." method="get">
@@ -16,15 +17,29 @@
     </form>
     <div id="intro-examples">
       <h2>Check out some examples</h2>
+      <ul>
+        <li><a href="/?3135754">3135754</a></li>
+        <li><a href="/?6060661">6060661</a></li>
+      </ul>
     </div>
   </div>
 </div>
+
 <footer>
-  <div class="container">
-    <div class="wrap">
-      <p><a href="/">prettygist</a></p>
-      <p>Made by <b>Patrick</b></p>
-      <p>Inspired by <a href="http://resume.github.io/">GitHub Résumé</a></p>
-    </div>
+<div class="wrap footer">
+  <div class="footer-container">
+    <span><a href="/">prettygist</a></span>
+    <p>Made by <b>Patrick</b></p>
   </div>
+</div>
 </footer>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $('form#run').submit(function(e){
+    var gist_id = $('#gist_id').val();
+    document.location = document.location.pathname + '?' + gist_id;
+    e.preventDefault();
+  });
+});
+</script>
