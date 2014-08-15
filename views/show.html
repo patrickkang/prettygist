@@ -1,20 +1,21 @@
 <div class="container">
   <div class="wrap">
-    <!-- <div class="back_button">
+    <div class="back_button">
       <a href="/"><span>« </span> Back</a>
-    </div> -->
+    </div>
     <div class="page_owner">
+      <img class="avatar-img" src="{{owner_avatar}}" alt="{{owner}}">
       <a href="{{owner_url}}">{{owner}}</a>
     </div>
     <div class="page_info">
       <h1 class="page_title">{{title}}</h1>
-      <h2 class="page_meta"><span>By <a href="{{owner_url}}">{{owner}}</a> | Gist <a href="{{gist_url}}">#{{gist_id}}</a></span></h2>
+      <p class="date">{{date}}</date>
+      <!-- <h2 class="page_meta"><span>By <a href="{{owner_url}}">{{owner}}</a> | Gist <a href="{{gist_url}}">#{{gist_id}}</a></span></h2> -->
     </div>
 
     <div class="page_content">
       {{{content}}}
-      <hr>
-      <div class="author">{{owner}}</div>
+      <!-- <hr><div class="author">{{owner}}</div> -->
     </div>
   </div>
 </div>

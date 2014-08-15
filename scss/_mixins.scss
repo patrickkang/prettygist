@@ -1,0 +1,17 @@
+
+@mixin img-circular($diameter){
+  width: $diameter;
+  height: $diameter;
+  background-size: cover;
+  display: block;
+  -webkit-border-radius: $diameter/2;
+     -moz-border-radius: $diameter/2;
+          border-radius: $diameter/2;
+}
+
+@mixin box-sizing($box-model) {
+  -webkit-box-sizing: $box-model; // Safari <= 5
+     -moz-box-sizing: $box-model; // Firefox <= 19
+          box-sizing: $box-model;
+}
+
