@@ -5,6 +5,11 @@ var gist_id;
 })();
 
 $(document).ready(function(){
+  marked.setOptions({
+    highlight: function(code, lang){
+      return hljs.highlightAuto(code).value;
+    }
+  });
   console.log(gist_id);
   if(gist_id === ''){
     indexPage();
@@ -49,11 +54,12 @@ var renderGist = function(data){
         gist_id: data.id,
         title: data.description,
         date: data.updated_at.substring(0,10),
+        public_or_private: data.public ? "Public" : "Private",
         gist_url: data.files[filename].raw_url,
         content: marked(data.files[filename].content)
       };
 
-      if(data.public){
+      if(data.owner){
         view.owner = data.owner.login;
         view.owner_avatar = data.owner.avatar_url;
         view.owner_url = data.owner.html_url;

@@ -9,7 +9,8 @@
   "browser" : true, // Shared browser globals e.g. 'window', 'document'
   "predef" : [
     "Mustache",
-    "marked"
+    "marked",
+    "hljs"
   ],
 
   // Development

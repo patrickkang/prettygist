@@ -2056,7 +2056,6 @@ a:hover, a:focus { text-decoration: none; color: #11505d; }
 .back-button { padding-bottom: 2em; }
 
 .owner-info a { display: block; }
-.owner-info span { margin-left: 15px; }
 
 h1.page-title { margin-bottom: 10px; }
 
@@ -2065,3 +2064,11 @@ h1.page-title { margin-bottom: 10px; }
 .page-content { padding-top: 2em; }
 
 .page-footer-text { border-top: 1px solid black; padding: 3em 0; margin-top: 5em; }
+
+/* table */
+table { border-top: 1px solid #ddd; width: 100%; max-width: 100%; }
+
+thead:first-child > tr:first-child > th { border-top: 0; }
+thead tr th { text-align: left; font-weight: bold; vertical-align: bottom; border-bottom: 2px solid #ddd; }
+
+th, td { padding: 8px; line-height: 1.42857143; vertical-align: top; border-top: 1px solid #ddd; }

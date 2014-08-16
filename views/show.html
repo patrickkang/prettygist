@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-11 col-md-offset-1">
-      <div class="page-content-container container">
+      <div class="page-content-container">
         <div class="row">
           <div class="col-md-1 back-button">
             <!-- <a href="/"><span>« </span> Back</a> -->
@@ -18,7 +18,7 @@
           </div>
           <div class="col-md-10 col-md-offset-1">
             <h1 class="page-title">{{title}}</h1>
-            <span class="label label-info">Public Gist</span>
+            <span class="label label-info">{{public_or_private}} Gist</span>
             <div class="date">{{date}}</div>
           </div>
         </div>
@@ -27,7 +27,7 @@
         <div class="row page-info">
           <div class="col-md-10">
             <h1 class="page-title">{{title}}</h1>
-            <span class="label label-info">Private Gist</span>
+            <span class="label label-info">Anonymous Gist</span>
             <div class="date">{{date}}</div>
           </div>
         </div>
