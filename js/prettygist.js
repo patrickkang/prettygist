@@ -5,7 +5,7 @@ var gist_id;
 })();
 
 $(document).ready(function(){
-  console.log("called");
+  console.log(gist_id);
   if(gist_id === ''){
     indexPage();
   } else {

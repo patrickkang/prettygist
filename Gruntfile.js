@@ -5,7 +5,7 @@ module.exports = function (grunt){
       options: {
         jshintrc: '.jshintrc'
       },
-      all: ['Gruntfile.js', 'js/*.js', '!js/vendor/*.js', '!js/prettygist.min.js']
+      all: ['Gruntfile.js', 'js/*.js', '!js/vendor/*']
     },
     sass:{ // task
       dist:{ // target

@@ -1,38 +1,35 @@
-<div class="container">
-  <div class="wrap">
-    <a href="/"><h1 id="site-name">prettygist</h1></a>
-    <div id="intro">
-      <div class="search-bar">
-        <div class="search-and-submit">
-          <form id="run" action="." method="get">
-              <input id="username" type="search" placeholder="Enter your github username and click on generate" />
-              <button type="submit" id="gen">GO</button>
-          </form>
+<div class="intro">
+    <div class="intro-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <h1 class="site-heading">Prettygist</h1>
+                    <p class="intro-text">A responsive Gist viewer.<br>Try now.</p>
+                </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-8 col-xs-offset-2 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2">
+                <form id="run" action="." method="get">
+                  <div class="input-group">
+                    <input class="form-control" id="gist_id" type="search" placeholder="Enter Gist ID" />
+                    <span class="input-group-btn">
+                      <button class="btn btn-default" type="submit" id="gen">Go!</button>
+                    </span>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="row">
+                <p>Check out some examples : <a href="/?3135754">3135754</a>, <a href="/?6060661">6060661</a></p>
+            </div>
+            <div class="row intro-footer">
+              <div class="col-md-8 col-md-offset-2">
+                  <p class="intro-footer-text">Made by Patrick with <i class="glyphicon glyphicon-heart"></i></p>
+              </div>
+            </div>
         </div>
-      </div>
-
-      <!-- <h2>What is prettygist?</h2> -->
-
     </div>
-
-    <div id="intro-examples">
-      <h2>Check out some examples</h2>
-      <ul>
-        <li><a href="/?3135754">3135754</a></li>
-        <li><a href="/?6060661">6060661</a></li>
-      </ul>
-    </div>
-  </div>
 </div>
-
-<footer>
-<div class="wrap footer">
-  <div class="footer-container">
-    <span><a href="/">prettygist</a></span>
-    <p>Made by <b>Patrick</b></p>
-  </div>
-</div>
-</footer>
 
 <script type="text/javascript">
 $(document).ready(function(){

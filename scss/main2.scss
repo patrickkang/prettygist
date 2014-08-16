@@ -1,0 +1,351 @@
+@import 'reset';
+@import 'variables';
+@import 'mixins';
+/* Base */
+/* ----------------------------------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Alegreya Sans', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5em;
+  font-weight: 300;
+  background-color: #fdfdfd;
+}
+p {
+  color: #4b4b4d;
+  font-size: 1.35em;
+  line-height: 1.4em;
+  margin: 0 0 20px 0;
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 200%;
+}
+
+
+h1{
+  font-family: 'Alegreya Sans', Helvetica, Arial, sans-serif;
+  line-height: 1.4;
+  font-size: 2.8em;
+}
+h2{
+  text-indent: 10px;
+  font-size: 150%;
+}
+h1, h2, h3, h4, h5{
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+a {
+  color: #2a7ae2;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #205caa; }
+
+blockquote{
+  padding: 10px 20px;
+  margin: 0 0 20px;
+  font-size: 17.5px;
+  border-left: 5px solid #f7f7f7;
+}
+
+ul, ol{
+  margin-top: 0;
+  margin-bottom: 10px;
+  list-style: disc;
+  margin-left: 40px;
+}
+ul ul, ol ul, ul ol, ol ol {
+  margin-bottom: 0;
+}
+
+
+/* Utility */
+.wrap:before,
+.wrap:after {
+  content: "";
+  display: table;
+}
+
+.wrap:after {
+  clear: both;
+}
+
+.wrap {
+  max-width: 800px;
+  padding: 0 30px;
+  margin: 0 auto;
+  zoom: 1;
+  overflow-wrap: break-word;
+}
+
+.container {
+  padding: 30px 0;
+}
+
+
+/* Form */
+// input{
+//   height: 50px;
+//   font-size: 1.2em;
+//   padding-left: 15px;
+//   width: 80%;
+// }
+// button{
+//   color: #333333;
+//   background-color: #ffffff;
+//   border-radius: 3px;
+//   border-color: rgba(0, 0, 0, 0.15);
+//   box-shadow: 0 -1px 0px rgba(0, 0, 0, 0.15) inset;
+//   -webkit-appearance: none;
+//   outline: none !important;
+//   -webkit-transition: all 0.1s;
+//   transition: all 0.1s;
+//   padding: 2px 10px;
+//   font-size: 1.2em;
+//   line-height: 1.5;
+//   -webkit-border-radius: 100%;
+//   -moz-border-radius: 100%;
+//   -o-border-radius: 100%;
+//   border-radius: 100%;
+//   opacity: .7;
+//   margin-left: -3.3em;
+// }
+
+
+
+h1#site-name{
+  font-size: 3em;
+  margin-bottom: 40px;
+}
+
+/* page styles */
+h1.page_title{
+  padding-left: 5px;
+  font-size: 4.5em;
+  line-height: 0.8em;
+}
+div.page_content img{
+  min-width: 100%;
+  max-width: 100%;
+  width: 100%;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.page_content h2 {
+  font-size: 2.625em;
+  line-height: 2.15384615;
+}
+
+.page_content h3{
+  font-size: 1.975em;
+  line-height: 1.73636364;
+}
+
+.page_content h4{
+  font-size: 1.525em;
+  line-height: 1.41111111;
+}
+
+
+/* footer */
+footer p{
+  font-size: .95em;
+  color: #828282;
+}
+
+footer b {
+  font-weight: 800;
+}
+.footer{
+  text-align: center;
+}
+.footer .footer-container{
+  padding-top: 2em;
+  margin-top: 3.5em;
+  border-top: 1px solid #e5e5e5;
+}
+.footer .footer-container a{
+  font-size: 1.35em;
+}
+
+.footer p{
+  padding-top: 1em;
+}
+
+
+
+
+
+
+#intro{
+  h2{
+    
+  }
+  .search-bar {
+    border-color: $search-bar-color;
+    margin-bottom: 3em;
+
+    // $search-bar-border-color: $base-border-color;
+    // $search-bar-border: 1px solid $search-bar-border-color;
+    // $search-bar-background: lighten($search-bar-border-color, 10);
+    width: 100%;
+    position: relative; 
+    display: inline-block;
+
+    input {
+      @include box-sizing(border-box);
+      display: block;
+    }
+
+    div.search-and-submit {
+      position: relative;
+
+      input[type=search] {
+        width: 100%;
+        padding: .5em .8em;
+        font-size: 1em;
+        font-style: italic;
+        border-radius: 20px * 2;
+        margin: 0;
+        border:1px solid $search-bar-color;
+        height: 3em;
+      }
+
+      button[type=submit] {
+        // @include button(simple, lighten($base-border-color, 10));
+        // @include position(absolute, 0.3em 0.3em 0.3em 0);
+        outline: none;
+        padding: 5px 10px;
+        border: 1px solid $light-grey;
+        border-radius: 25px;
+        box-shadow: inset 0 1px 0 0 white;
+        color: #333333;
+        display: inline-block;
+        font-size: 15px;
+        font-weight: bold;
+        background-color: #f7f7f7;
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f7f7f7), color-stop(100%, #dadada));
+        background-image: -webkit-linear-gradient(#f7f7f7, #dadada);
+        background-image: linear-gradient(#f7f7f7, #dadada);
+        padding: 7px 18px;
+        text-decoration: none;
+        text-shadow: 0 1px 0 white;
+        background-clip: padding-box;
+        position: absolute;
+        top: 0em;
+        right: 0.137em;
+        bottom: 0em;
+        outline: none;
+        padding: 5px 10px;
+
+        img {
+          height: 12px;
+          opacity: .7;
+        }
+      }
+    }
+  }
+}
+
+.back_button{
+  margin-bottom: 1.5em;
+}
+.page_info{
+  p.date{
+    color: $light-grey;
+    margin-bottom: 2em;
+  }
+}
+.page_owner {
+  display: inline-block;
+  font-family: $sans-serif-2;
+  font-size: .7em;
+  font-weight: 900;
+  letter-spacing: 1px;
+  padding: .1em 0;
+  text-align: left;
+  text-transform: uppercase;
+  float:left;
+  margin-right: 2em;
+  .avatar-img {
+    @include img-circular(60px);
+  }
+  a{
+    margin: 10px;
+  }
+}
+
+.page_meta{
+  margin-bottom: 1.5em;
+}
+
+.page_content{
+  h1, h2, h3, h4{
+    font-family: $sans-serif-2;
+  }
+  h1 {
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: .6em;
+  }
+  h2 {
+   font-size: 2em;
+   font-weight: 700;
+   text-transform: uppercase;
+   line-height: 1.4em;
+   margin: .75em 0;
+  }
+  h3 {
+   font-size: 1.6em;
+   font-weight: 550;
+   text-transform: uppercase;
+   line-height: 1.4em;
+   margin-bottom: .5em; 
+  }
+  h4 {
+   font-size: 1.35em;
+   font-weight: 450;
+   text-transform: uppercase;
+   line-height: 1.4em;
+   margin-bottom: .5em; 
+  }
+  p {
+    font-family: $sans-serif;
+    font-size: 1.2em;
+    font-weight: 400;
+    line-height: 1.4em;
+    margin-bottom: 1.1em;
+  }
+  hr {
+    width: 3em;
+    margin: 1.5em 0;
+  }
+  .author {
+    font-family: $sans-serif;
+    font-style: italic;
+  }
+}
