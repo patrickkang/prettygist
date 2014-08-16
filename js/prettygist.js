@@ -46,15 +46,18 @@ var renderGist = function(data){
       for(var filename in data.files);
 
       view={
-        title: data.description,
         gist_id: data.id,
+        title: data.description,
         date: data.updated_at.substring(0,10),
-        owner: data.owner.login,
-        owner_avatar: data.owner.avatar_url,
         gist_url: data.files[filename].raw_url,
-        owner_url: data.owner.html_url,
         content: marked(data.files[filename].content)
       };
+
+      if(data.public){
+        view.owner = data.owner.login;
+        view.owner_avatar = data.owner.avatar_url;
+        view.owner_url = data.owner.html_url;
+      }
 
       template = response;
       html = Mustache.to_html(template, view);

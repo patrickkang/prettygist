@@ -1,29 +1,48 @@
 <div class="container">
-  <div class="wrap">
-    <div class="back_button">
-      <a href="/"><span>« </span> Back</a>
-    </div>
-    <div class="page_owner">
-      <img class="avatar-img" src="{{owner_avatar}}" alt="{{owner}}">
-      <a href="{{owner_url}}">{{owner}}</a>
-    </div>
-    <div class="page_info">
-      <h1 class="page_title">{{title}}</h1>
-      <p class="date">{{date}}</date>
-      <!-- <h2 class="page_meta"><span>By <a href="{{owner_url}}">{{owner}}</a> | Gist <a href="{{gist_url}}">#{{gist_id}}</a></span></h2> -->
-    </div>
-
-    <div class="page_content">
-      {{{content}}}
-      <!-- <hr><div class="author">{{owner}}</div> -->
+  <div class="row">
+    <div class="col-md-11 col-md-offset-1">
+      <div class="page-content-container container">
+        <div class="row">
+          <div class="col-md-1 back-button">
+            <!-- <a href="/"><span>« </span> Back</a> -->
+            <a href="/"><i class="glyphicon glyphicon-chevron-left"></i> Back</a>
+          </div>
+        </div>
+        {{#owner}}
+        <div class="row page-info">
+          <div class="col-md-1 owner-info">
+            <a href="{{owner_url}}">
+              <img class="owner-img" src="{{owner_avatar}}" alt="{{owner}}">
+              <span class="label label-primary">{{owner}}</span>
+            </a>
+          </div>
+          <div class="col-md-10 col-md-offset-1">
+            <h1 class="page-title">{{title}}</h1>
+            <span class="label label-info">Public Gist</span>
+            <div class="date">{{date}}</div>
+          </div>
+        </div>
+        {{/owner}}
+        {{^owner}}
+        <div class="row page-info">
+          <div class="col-md-10">
+            <h1 class="page-title">{{title}}</h1>
+            <span class="label label-info">Private Gist</span>
+            <div class="date">{{date}}</div>
+          </div>
+        </div>
+        {{/owner}}
+        <div class="row page-content">
+          <div class="col-md-9">
+            {{{content}}}
+          </div>
+        </div>
+        <div class="row page-footer">
+          <div class="col-md-9 page-footer-text">
+            <span><a href="/">prettyGist</a></span>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
-<footer>
-<div class="wrap footer">
-  <div class="footer-container">
-    <span><a href="/">prettygist</a></span>
-    <p>Made by <b>Patrick</b></p>
-  </div>
-</div>
-</footer>
