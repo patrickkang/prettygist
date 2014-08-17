@@ -37,6 +37,8 @@ var getGist = function(gist_id){
     dataType: 'json',
     success: function(data){
       renderGist(data);
+    },error: function(data){
+      renderNotFoundPage();
     }
   });
 };
@@ -68,6 +70,17 @@ var renderGist = function(data){
       template = response;
       html = Mustache.to_html(template, view);
       $('#prettygist').append($(html));
+    }
+  });
+};
+
+var renderNotFoundPage = function(){
+  $.ajax({
+    url: 'views/error.html',
+    dataType: 'html',
+    success : function(data){
+      var template = data;
+      $('#prettygist').html(data);
     }
   });
 };
