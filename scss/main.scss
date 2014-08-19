@@ -54,18 +54,26 @@ a {
 
 
 .intro {
-  color: #fff;
+  color: $main-color;
+  background-color: $main-background-color;
   display: table;
   width: 100%;
   height: 100%;
   padding: 100px 0;
   text-align: center;
-  color: #fff;
-  background-color: #000;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
+  a{
+    color: $red-color;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    &:hover, &:focus{
+      color: #B81E16;
+    }
+  }
   .intro-body{
     display: table-cell;
     vertical-align: middle;
