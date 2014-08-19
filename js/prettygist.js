@@ -12,7 +12,6 @@ $(document).ready(function(){
       return hljs.highlightAuto(code).value;
     }
   });
-  console.log(gist_id);
   if(gist_id === ''){
     indexPage();
   } else {
