@@ -1,7 +1,7 @@
 var gist_id;
 
 (function(){
-  gist_id = window.location.search.substring(1).slice(0, -1);
+  gist_id = window.location.search.substring(1).slice(0);
 })();
 
 $(document).ready(function(){
